@@ -6,18 +6,27 @@
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  export default {
+    name: 'app'
+  }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+  @import "assets/sass/main"
+  *
+    font-family: 'Roboto', 微軟正黑體
+
+  body, html
+    +size(100%)
+
+  #app
+    +size(100%)
+
+  button
+    &:hover
+      .btn__content
+        &::before
+          background-color: inherit !important
+
+
 </style>
