@@ -1,0 +1,49 @@
+@import "tool"
+
+.col
+  display: flex
+  flex-direction: column
+
+[self="bottom"], [self="right"]
+  align-self: flex-end
+
+[self="top"], [self="left"]
+  align-self: flex-start
+
+[self="center"]
+  align-self: center
+
+.fill-width
+  width: 100%
+
+.fill-height
+  height: 100%
+
+.white
+  background-color: white
+.white-text
+  color: white
+
+.pointer
+  cursor: pointer
+*
+  position: relative
+
+.default_input[type=text]
+  background-color: #ffffff
+  border: 1px solid #cccccc
+  border-radius: 3px
+
+.default_input[type=text]:focus
+  border-color: rgba(82, 168, 236, 0.8)
+  outline: 0
+
+// 特別這樣寫不然vuetify與bootstrap style 會造成衝突
+.modal
+  .picker--date__header
+    .btn
+      padding: 0px
+    .btn__content
+      margin: 0px
+      width: 36px !important
+      height: 36px !important
