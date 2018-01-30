@@ -3,8 +3,6 @@ import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
 import "vuetify/dist/vuetify.min.css"
-import "flexboxgrid"
-import "@/assets/mylib/functions"
 
 import install from "@/components/utli/index"
 
