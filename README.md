@@ -22,4 +22,10 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 
 ## 2018/01/30新增
-node my-gulp-task.js 可以把pages 裡面的data init到utli.js
+node my-gulp-task.js 
+```javascript
+require("./component_utli_generator")
+require("./routes_generator")
+```
+1 將component/utli 自動生成
+2 將routes 依造page路徑生成
