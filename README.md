@@ -20,12 +20,19 @@ npm run build --report
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+## Remove git origin
+```sh
+git remote rm origin
+git remote add origin <your-path>
+```
+
+
+
 
 ## 2018/01/30新增
-node my-gulp-task.js 
-```javascript
-require("./component_utli_generator")
-require("./routes_generator")
-```
-1 將component/utli 自動生成
-2 將routes 依造page路徑生成
+
+將component/utli 自動生成
+node component_utli_generateor.js
+
+將routes 依造page路徑生成
+node routes_generator.js
