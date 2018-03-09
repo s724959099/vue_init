@@ -2,6 +2,11 @@
   width: $w
   height: $h
 
+@mixin max-size($w,$h:$w)
+  max-width: $w
+  max-height: $h
+  +size(100%)
+
 @mixin test($color:black)
   border: solid 1px $color
 
@@ -20,6 +25,65 @@
   top: 50%
   left: 50%
   transform: translateX(-50%) translateY(- 50%)
+
+@mixin not-draggable()
+  user-drag: none
+  user-select: none
+  -moz-user-select: none
+  -webkit-user-drag: none
+  -webkit-user-select: none
+  -ms-user-select: none
+
+
+// responsive
+
+
+$sm: 600px
+$md: 960px
+$lg: 1264px
+$xl: 1904px
+
+@mixin xs-width()
+  @media all and (max-width: $sm - 1)
+    @content
+
+@mixin sm-width()
+  +xs-width
+    @content
+  @media all and (min-width: $sm) and (max-width: $md - 1)
+    @content
+
+@mixin md-width()
+  +sm-width
+    @content
+  +xs-width
+    @content
+  @media all and (min-width: $md) and (max-width: $lg - 1)
+    @content
+
+@mixin lg-width()
+  +md-width
+    @content
+  +sm-width
+    @content
+  +xs-width
+    @content
+  @media all and (min-width: $lg) and (max-width: $xl - 1)
+    @content
+
+@mixin xl-width()
+  +lg-width
+    @content
+  +md-width
+    @content
+  +sm-width
+    @content
+  +xs-width
+    @content
+  @media all and (min-width: $xl)
+    @content
+
+
 
 *
   box-sizing: border-box
