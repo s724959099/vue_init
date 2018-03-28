@@ -1,5 +1,5 @@
 <template>
-demo it   ffffff
+<div></div>
 </template>
 
 <script>

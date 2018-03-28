@@ -1,18 +1,16 @@
 <template>
-index  pageffffff
+  <div></div>
 </template>
 
 <script>
 
   export default {
-    data () {
+    data() {
 
-      return {
-      }
+      return {}
     },
-    methods: {
-    },
-    mounted(){
+    methods: {},
+    mounted() {
     }
   }
 </script>
