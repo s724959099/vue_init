@@ -1,7 +1,6 @@
 <template>
   <div>
-    {{demo.temp}}
-    <router-view></router-view>
+    <button @click="add">+1</button>
   </div>
 </template>
 
@@ -15,10 +14,12 @@
         demo
       }
     },
-    methods: {},
-    mounted() {
-      window.d = demo
-      console.log("main mounted")
+    methods: {
+      add () {
+        this.demo.temp += 1
+      }
+    },
+    mounted () {
     }
   }
 </script>

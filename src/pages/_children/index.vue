@@ -1,6 +1,7 @@
 <template>
   <div>
     <button @click="add">+1</button>
+    <button @click="$router.push('/test')">totest</button>
   </div>
 </template>
 

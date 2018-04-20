@@ -1,17 +1,24 @@
-import m9f51323ff6ff4b2eb4b0a576859fcb8b from '@/pages/_children/index.vue'
-import m4ffba011696740ebb3a1a8e945ecc071 from '@/pages/main.vue'
+import m5b0a83dd23d94611afd5735a06d1a1ce from '@/pages/_children/index.vue'
+import md752e19926454d27ea0463031e7fe2f6 from '@/pages/_children/test/index.vue'
+import m340851883db04770d88d08da23465223 from '@/pages/main.vue'
 
 
 export default [
 	{
 		"path": "/",
 		"name": "/",
-		"component": m4ffba011696740ebb3a1a8e945ecc071,
+		"component": m340851883db04770d88d08da23465223,
 		"children": [
 			{
 				"path": "/",
 				"name": "/",
-				"component": m9f51323ff6ff4b2eb4b0a576859fcb8b,
+				"component": m5b0a83dd23d94611afd5735a06d1a1ce,
+				"children": []
+			},
+			{
+				"path": "/test",
+				"name": "/test",
+				"component": md752e19926454d27ea0463031e7fe2f6,
 				"children": []
 			}
 		]
