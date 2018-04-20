@@ -4,7 +4,7 @@ mb_utli.install_utli(global)
 
 let fs = require('fs')
 let path = require('path')
-const INDEX_PATH = "./src/components/utli"
+const INDEX_PATH = "./src/components/"
 
 class GenFiles {
   constructor(str_path) {
