@@ -1,13 +1,18 @@
 <template>
-  <div></div>
+  <div>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
+  import demo from '@/store/demo'
 
   export default {
-    data() {
+    data () {
 
-      return {}
+      return {
+        demo
+      }
     },
     methods: {},
     mounted() {
