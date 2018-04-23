@@ -85,7 +85,7 @@ class GenFiles {
       ret.append(item)
     }
     let import_str =
-      `import ${main.id} from '${main.path.replace(/src/, "@")}'`
+      `const ${main.id} =  ()=> import('${main.path.replace(/src/, "@")}')`
     this.imports.push(import_str)
     obj.children.append(...ret)
     return obj
@@ -135,7 +135,7 @@ class GenFiles {
       } else {
         obj = this.path_to_tmeplate(item)
         let import_str =
-          `import ${item.id} from '${item.path.replace(/src/, "@")}'`
+          `const ${item.id} = ()=> import('${item.path.replace(/src/, "@")}')`
         this.imports.push(import_str)
       }
       ret.append(obj)

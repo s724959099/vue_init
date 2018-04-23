@@ -4,7 +4,7 @@ mb_utli.install_utli(global)
 
 let fs = require('fs')
 let path = require('path')
-const INDEX_PATH = "./src/components/"
+const INDEX_PATH = "./src/components"
 
 class GenFiles {
   constructor(str_path) {
@@ -41,7 +41,7 @@ export default install
     let output = ""
     for (let item of data) {
       let import_str =
-        `import ${item.file_name.split(".")[0]} from '${item.file_path.replace(/src/, "@")}'`
+        `const ${item.file_name.split(".")[0]} = ()=> import('${item.file_path.replace(/src/, "@")}')`
       this.imports.append(import_str)
       output += `\t${item.file_name.split(".")[0]},\n`
     }

@@ -29,8 +29,8 @@ export const storeMain = {
       for (let vue of vueList) {
         for ([key, val] of Object.entries(vue.$bk_data)) {
           vue.$data[key] = initData({}, val)
-          vue.$mount()
         }
+        vue.$mount()
       }
     }
   }
