@@ -3,7 +3,8 @@ import Store from '@/assets/js/store'
 export default new Store({
   data () {
     return {
-      temp: 3
+      temp: 3,
+      arr:[3]
     }
   },
   mounted () {

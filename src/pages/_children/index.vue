@@ -21,6 +21,8 @@
       }
     },
     mounted () {
+      this.demo.arr.append(4)
+      console.log(this.demo.arr)
     }
   }
 </script>

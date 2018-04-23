@@ -6,7 +6,11 @@ const deepAssign = (target, ...sources) => {
     (source) => {
       Object.keys(source).map(
         (key) => {
-          target[key] = checkType.Object(target[key]) && checkType.Object(source[key]) ? deepAssign(target[key], source[key]) : source[key]
+          if(checkType.Array(source[key])){
+            target[key] = [...source[key]]
+          }else{
+            target[key] = checkType.Object(target[key]) && checkType.Object(source[key]) ? deepAssign(target[key], source[key]) : source[key]
+          }
         }
       )
     }
